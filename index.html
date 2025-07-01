@@ -1,8 +1,33 @@
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touhou Blackjack</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <h1 style="text-align: center;">Touhou Blackjack!</h1>
+    <p style="text-align: center;" id="condition"></p>
+    <div id="main">
+    <div id="cirno" onmouseover="showHands('cirnohand')"></div>
+    <div id="table"></div>
+    <div id="reimu" onmouseover="showHands('reimuhand')"></div>  
+    </div>
+    <div id="hands">
+        <div class="hands" id="cirnohand" onmouseleave="hideHands('cirnohand')" onclick="hideHands('cirnohand')"><h2>Cirno's Hand (Dealer's)</h2><br>Value:<span id="dealersum"></span><br>
+        <div id="dealercards" class="wherethecardsare">
+            <img src="img/BACK.png" class="cards" id="hidden">
+        </div></div>
+        <div class="hands" id="reimuhand" onmouseleave="hideHands('reimuhand')"><h2>Reimu's Hand (Player's)</h2><br>Value:<span id="yoursum"></span>
+        <div id="yourcards" class="wherethecardsare">
+        </div>
+        <br>
+        <input type="button" value="Hit" id="hit" onclick="hit()">
+        <input type="button" value="Stay" id="stay" onclick="stay()">
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>   

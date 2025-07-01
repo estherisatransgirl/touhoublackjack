@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+body {
+    font-family: 'DM Sans', serif, sans-serif;
+    background-color: gray;
+    overflow: hidden;
+}
+#background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    visibility: visible;
+    z-index: -2;
+}
+.hands {
+    height: 100%;
+    float: left;
+    text-align: center;
+    width: 20vw;
+    line-height: 3%;
+    font-size: 0.8em;
+    color: white;
+    z-index: 9999;
+    visibility: hidden;
+}
+#cirno, #reimu, #table {
+    width: 20vw;
+    height: 70vh; 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 5%;
+    margin-top: -3%;
+    z-index: -1;
+}
+#cirno {
+background-image: url(img/cirno.png);
+margin-left: 4%;
+margin-top: 2%;
+}
+#cirno:hover {
+    background-image: url(img/cirnofumorotate.png);
+    background-size: 90%;
+}
+#reimu {
+    background-image: url(img/reimu.png);
+    background-size: 90%;
+    margin-top: 4%;
+    margin-left: -5%;
+}
+#reimu:hover {
+    background-image: url(img/reimufumorotate.png);
+    background-size: 80%;
+}
+
+#main {
+    width: calc(3 * 20vw + 2 * 5%);
+    height: 50vh;
+
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 999;
+    overflow: hidden;
+}
+#table {
+    background-image: url(img/tables.png);
+        background-size:80%;
+    background-repeat: no-repeat;
+    margin-top: 12%;
+    transform: rotate(-10deg);
+}
+#hands {
+    width: 80vw;
+    height: 25vh;
+    position: absolute;
+    top: 3%;
+    left: 17%; 
+}
+#cirnohand {
+    border: 3px dashed rgb(67, 255, 249);
+    background-color: rgba(88, 255, 249, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(67, 255, 249, 0.7);
+    padding: 10px;
+}
+
+#reimuhand {
+    margin-left: 28%;
+    border: 3px dashed red;
+    background-color: rgba(255, 88, 88, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    padding: 10px;
+}
+#hit, #stay {
+    margin-top: 5%;
+    border: 3px dashed rgb(0, 0, 0);
+    background-color: rgba(30, 30, 30, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(21, 21, 21, 0.7);
+    padding: 10px;
+    width: 100px;
+    margin-left: 10px;
+    font-family: 'DM Sans';
+    position: relative;
+    z-index: 99999;
+}
+input {
+    z-index: 99999;
+    position: relative;
+    font-family: 'DM Sans';
+}
+#yourcards img {
+        height: 100px;
+    width: 75px;
+    margin-left: 0px;
+}
+#dealercards img {
+        height: 100px;
+    width: 75px;
+    margin-left: 0px;
+}
+.wherethecardsare {
+    margin-top: 10px;
+}
